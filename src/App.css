@@ -155,7 +155,8 @@ header {
 }
 
 .book_panel{
-  height: 180px;
+  min-height: 180px;
+  height: auto;
   margin: 10px;
   margin-left: 0px !important;
   margin-right: 0px !important;
@@ -168,12 +169,24 @@ header {
 }
 
 .search_bar .input_box{
-  width: 80% !important;
+  width: 69% !important;
+}
+.search_bar span{
+  display: inline-block;
 }
 
 .search_bar Button{
   background: #d9dc25;
   color: #212529;
+}
+
+.dropdown{
+  float: left;
+}
+
+.search_form_input{
+  float: right;
+  width: 77%;
 }
 
 .book_panel_right h5{
@@ -190,9 +203,17 @@ header {
 
 @media only screen and (max-width: 600px){
   .search_bar .input_box{
-  width: 55% !important;
+  width: 53% !important;
   }
   .sub_header p{
     text-align: center;
   }
+  .search_form_input{
+  float: right;
+  width: 59%;
+}
+}
+
+Pagination{
+  text-align: center;
 }

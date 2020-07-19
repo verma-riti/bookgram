@@ -1,8 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
 import bookDetails from '../json/book.json';
 
 function BookList() {
@@ -22,11 +21,11 @@ function BookList() {
                       <Col md={9} xs={8} className="book_panel_right">
                          <h5>{book.title}</h5>
                         
-                          <p>Authors: {book.authors.map(author =>{
-                            return(<small>{author}, &nbsp;</small>)
+                          <p>Authors: {book.authors.map((author,j) =>{
+                            return(<small key={j}>{author}, &nbsp;</small>)
                           })}</p>
-                          <p>Categories: {book.categories.map(category =>{
-                            return(<small>{category}, &nbsp;</small>)
+                          <p>Categories: {book.categories.map((category,k) =>{
+                            return(<small key={k}>{category}, &nbsp;</small>)
                           })}
                          </p>
                           <p>Isbn: <small>{book.isbn}</small> &nbsp;&nbsp;Pages: <small>{book.pageCount}</small> &nbsp; &nbsp;Status: <small>{book.status}</small></p>
